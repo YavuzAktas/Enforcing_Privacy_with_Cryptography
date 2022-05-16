@@ -2,20 +2,19 @@
 
 int main(void){
 	
-	int data, backupData, encrypted, backupEncrypted;		//Integer and encrypted integer 
-	int digit1, digit2, digit3, digit4;						//Digits of integer
-	int x;													//Number of loop
-	int remainder;											//Remainder of an integer divided by 10
+	int data, backupData, encrypted, backupEncrypted;			//Integer and encrypted integer 
+	int digit1, digit2, digit3, digit4;							//Digits of integer
+	int x;														//Number of loop
+	int remainder;												//Remainder of an integer divided by 10
 	int counter = 1;
-	
 	
 	printf("\n----------Enforcing Privacy with Cryptography----------\n\n");
 	
 	printf("1-)Encrypting\n2-)Decrypting\n3-)Exit\n (Data cannot be decrypted until encrypted ) \n");
 	scanf("%d", &x );
 	
+	
 	while( x != 3 ){
-		
 		
 		if( x == 1 ){
 			
@@ -24,7 +23,7 @@ int main(void){
 			
 			if( data >= 1 ){
 			
-				backupData = data;					//Backup of the number
+				backupData = data;								//Backup of the number
 				remainder = ( backupData + 7777 ) % 10 ;		//We will use the remaining number to decrypt
 				backupData = ( backupData + 7777 ) / 10;		//We add 7 to each digit of the integer and divide the result by 10
 				
@@ -41,14 +40,12 @@ int main(void){
 				backupData = ( digit3 * 1 ) + ( digit4 * 10 ) + ( digit1 * 100 ) + ( digit2 * 1000 );	//swap the first digitwith the third, and swap the second digit with the fourth
 				
 				printf("Encrypted integer is %d\n\n", backupData );
-			
 			}
 			
 			else if( data < 1 ){
 				
 				printf("You entered wrong data. You are redirected to the menu!!\n\n");
-			}
-			
+			}	
 		}
 		
 		
@@ -93,9 +90,7 @@ int main(void){
 		
 		printf("---------------------------------------------------------\n\n");
 		printf("1-)Encrypting\n2-)Decrypting\n3-)Exit\n");
-		scanf("%d", &x );
-		
-	}
-	
+		scanf("%d", &x );		
+	}	
 }
 
